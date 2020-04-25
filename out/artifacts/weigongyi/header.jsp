@@ -3,6 +3,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!--导航开始-->
+
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <!--小屏幕导航按钮和logo-->

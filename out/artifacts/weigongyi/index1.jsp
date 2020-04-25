@@ -34,12 +34,12 @@
                     <span class="icon-bar">一灯如豆</span>
                     <span class="icon-bar">万盏燎原</span>
                 </button>
-                <a class="navbar-brand" href="index.html"></a>
+                <a class="navbar-brand" href="index1.jsp"></a>
             </div>
 
             <div id="navbar-collapse" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">主页</a></li>
+                    <li class="active"><a href="index1.jsp">主页</a></li>
                     <li><a href="#">公益咨询</a></li>
                     <li><a href="#">志愿招募</a></li>
                     <li>
@@ -74,13 +74,13 @@
                         </ul>
                     </li>
 
-                    <li class="probootstra-cta-button last"><a href="donate.html" class="btn btn-primary">我要捐</a></li>
+                    <li class="probootstra-cta-button last"><a href="" class="btn btn-primary">登录</a></li>
                 </ul>
             </div>
         </div>
         </nav>
 
-        <section class="probootstrap-hero" style="background-image: url(<%=basePath %>images/hero_bg_bw_1.jpg)"  data-stellar-background-ratio="0.5">
+        <section class="probootstrap-hero" style="background-image: url(<%=basePath %>img/hero_bg_bw_1.jpg)"  data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
