@@ -1,6 +1,7 @@
 package com.chengxusheji.service;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import javax.annotation.Resource; 
 import org.springframework.stereotype.Service;
 import com.chengxusheji.po.UserInfo;
@@ -104,5 +105,18 @@ public class UserInfoService {
     		userInfoMapper.deleteUserInfo(_user_name);
     	}
     	return _user_names.length;
+    }
+
+    public String checkLogin(String userName,String password) throws Exception{
+        UserInfo userInfo = getUserInfo(userName);
+        if(userInfo!=null){
+            if(Objects.equals(userInfo.getPassword(),password.replaceAll(" ",""))){
+                return "success";
+            }else {
+                return "密码错误！";
+            }
+        }else {
+            return "该用户未注册";
+        }
     }
 }

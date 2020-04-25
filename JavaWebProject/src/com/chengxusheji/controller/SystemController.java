@@ -1,12 +1,14 @@
 package com.chengxusheji.controller;
 
 import java.io.PrintWriter;
+import java.util.Objects;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
- 
+
+import com.chengxusheji.service.UserInfoService;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller; 
 import org.springframework.ui.Model;
@@ -27,8 +29,10 @@ import com.chengxusheji.utils.UserException;
 @SessionAttributes("username")
 public class SystemController { 
 	
-	@Resource AdminService adminService;  
-	
+	@Resource AdminService adminService;
+	@Resource UserInfoService userInfoService;
+
+
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(Model model) {
 		model.addAttribute(new Admin());
@@ -39,16 +43,13 @@ public class SystemController {
 	@RequestMapping(value="/frontLogin",method=RequestMethod.POST)
 	public void frontLogin(@RequestParam("userName")String userName,@RequestParam("password")String password,HttpServletResponse response,HttpSession session) throws Exception { 
 		boolean success = true;
-		String msg = ""; 
-
-		/*
-		if (!userInfoService.checkLogin(userName, password)) { 
-			msg = userInfoService.getErrMessage();
+		String msg = userInfoService.checkLogin(userName,password);
+		if (Objects.equals(msg,"success")) {
 			success = false; 
 		} 
 		if(success) {
 			session.setAttribute("user_name", userName); 
-		}*/
+		}
   
         response.setContentType("text/json;charset=UTF-8");  
         PrintWriter out = response.getWriter();  
