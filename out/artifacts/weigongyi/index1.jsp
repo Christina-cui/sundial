@@ -37,46 +37,48 @@
                 <a class="navbar-brand" href="index1.jsp"></a>
             </div>
 
-            <div id="navbar-collapse" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index1.jsp">主页</a></li>
-                    <li><a href="#">公益咨询</a></li>
-                    <li><a href="#">志愿招募</a></li>
-                    <li>
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">志愿风采</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">活动风采</a></li>
-                            <li><a href="#">特色活动</a></li>
-                            <li><a href="#">团队</a></li>
-                            <li><a href="#">个人</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">公益论坛</a></li>
-                    <li><a href="#">公益求助</a> </li>
-                    <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">更多</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="about.html">1</a></li>
-                            <li><a href="testimonial.html">2</a></li>
-                            <li><a href="cause-single.html">Cause Single</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li class="dropdown-submenu dropdown">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Second Level Menu</a></li>
-                                    <li><a href="#">Second Level Menu</a></li>
-                                    <li><a href="#">Second Level Menu</a></li>
-                                    <li><a href="#">Second Level Menu</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="news.html">News</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </li>
+            <jsp:include page="header1.jsp"></jsp:include>
 
-                    <li class="probootstra-cta-button last"><a href="" class="btn btn-primary">登录</a></li>
-                </ul>
-            </div>
+<%--            <div id="navbar-collapse" class="navbar-collapse collapse">--%>
+<%--                <ul class="nav navbar-nav navbar-right">--%>
+<%--                    <li class="active"><a href="index1.jsp">主页</a></li>--%>
+<%--                    <li><a href="#">公益咨询</a></li>--%>
+<%--                    <li><a href="#">志愿招募</a></li>--%>
+<%--                    <li>--%>
+<%--                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">志愿风采</a>--%>
+<%--                        <ul class="dropdown-menu">--%>
+<%--                            <li><a href="#">活动风采</a></li>--%>
+<%--                            <li><a href="#">特色活动</a></li>--%>
+<%--                            <li><a href="#">团队</a></li>--%>
+<%--                            <li><a href="#">个人</a></li>--%>
+<%--                        </ul>--%>
+<%--                    </li>--%>
+<%--                    <li><a href="#">公益论坛</a></li>--%>
+<%--                    <li><a href="#">公益求助</a> </li>--%>
+<%--                    <li class="dropdown">--%>
+<%--                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">更多</a>--%>
+<%--                        <ul class="dropdown-menu">--%>
+<%--                            <li><a href="about.html">1</a></li>--%>
+<%--                            <li><a href="testimonial.html">2</a></li>--%>
+<%--                            <li><a href="cause-single.html">Cause Single</a></li>--%>
+<%--                            <li><a href="gallery.html">Gallery</a></li>--%>
+<%--                            <li class="dropdown-submenu dropdown">--%>
+<%--                                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>--%>
+<%--                                <ul class="dropdown-menu">--%>
+<%--                                    <li><a href="#">Second Level Menu</a></li>--%>
+<%--                                    <li><a href="#">Second Level Menu</a></li>--%>
+<%--                                    <li><a href="#">Second Level Menu</a></li>--%>
+<%--                                    <li><a href="#">Second Level Menu</a></li>--%>
+<%--                                </ul>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="news.html">News</a></li>--%>
+<%--                            <li><a href="contact.html">Contact</a></li>--%>
+<%--                        </ul>--%>
+<%--                    </li>--%>
+
+<%--                    <li class="probootstra-cta-button last"><a href="" class="btn btn-primary">登录</a></li>--%>
+<%--                </ul>--%>
+<%--            </div>--%>
         </div>
         </nav>
 
