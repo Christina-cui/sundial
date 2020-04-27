@@ -44,7 +44,7 @@ $(function(){
         $.validator.addMethod("checkPhone",function(value,element,param){
             var flag = false;
             $.ajax({
-                url:"${pageContext.request.contextPath}/userModel/checkPhone.do",
+                url:"<%=basePath%>checkPhone",
                 data:{"name":value},
                 async:false,
                 dataType:"html",
@@ -81,7 +81,7 @@ $(function(){
         $.validator.addMethod("checkEmail",function(value,element,param){
             var flag = false;
             $.ajax({
-                url:"${pageContext.request.contextPath}/userModel/checkEmail.do",
+                url:"<%=basePath%>checkEmail",
                 data:{"name":value},
                 async:false,
                 dataType:"html",

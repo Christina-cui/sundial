@@ -169,7 +169,7 @@ function login() {
 }
 function ajaxLogin() {
 	$.ajax({
-		url : "<%=basePath%>frontLogin",
+		url : "login",
 		type : 'post',
 		dataType: "json",
 		data : {

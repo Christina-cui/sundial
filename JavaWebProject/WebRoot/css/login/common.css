@@ -86,7 +86,7 @@ header{
 
 
 .login_wrap{
-    background: url(bg.jpg) no-repeat center;
+    background: url(../../img/bg.png) no-repeat center;
     background-size: 100%;
 }
 .ceng{
@@ -98,7 +98,7 @@ header{
     width: 500px;
     height: 150px;
     margin: 0px auto;
-    background: url(logo.png) no-repeat center;
+    background: url(../../img/logo.png) no-repeat center;
 }
 .login_box{
     width: 360px;

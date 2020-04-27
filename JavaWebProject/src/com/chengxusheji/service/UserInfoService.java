@@ -119,4 +119,12 @@ public class UserInfoService {
             return "该用户未注册";
         }
     }
+
+    public UserInfo findUserByPhone(String phone) throws Exception {
+        return userInfoMapper.queryUserByPhone(phone);
+    }
+
+    public UserInfo findUserByEmail(String email) throws Exception {
+        return userInfoMapper.queryUserByEmail(email);
+    }
 }

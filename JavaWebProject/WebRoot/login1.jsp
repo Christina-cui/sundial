@@ -30,7 +30,7 @@
                     <div class="login_title">
                         登录
                     </div>
-                    <form action="${pageContext.request.contextPath }/userModel/login.do" method="post">
+                    <form method="post">
 
                         <div class="form_text_ipt">
                             <input name="username" type="text" placeholder="会员号/手机号/邮箱">
@@ -49,31 +49,43 @@
                             </div>
                         </div>
                         <div class="form_btn">
-                            <input type="submit" value="登录" name="login">
+                            <input type="submit" value="登录" name="login" onclick="ajaxLogin();">
                             <!-- <button type="button" onclick="javascript:window.location.href='#'">登录</button> -->
                         </div>
                         <div class="error">${error }</div>
                         <div class="form_reg_btn">
                             <span>还没有帐号？</span><a href="${pageContext.request.contextPath }/register.jsp">马上注册</a>
-                            <a href="${pageContext.request.contextPath }/index.jsp">退出</a>
+                            <a href="${pageContext.request.contextPath }/index1.jsp">退出</a>
                         </div>
                     </form>
-                    <div class="other_login">
-                        <div class="left other_left">
-                            <span>其它登录方式</span>
-                        </div>
-                        <div class="right other_right">
-                            <a href="#"><i class="fa fa-qq fa-2x"></i></a>
-                            <a href="#"><i class="fa fa-weixin fa-2x"></i></a>
-                            <a href="#"><i class="fa fa-weibo fa-2x"></i></a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 <script type="text/javascript" src="<%=basePath%>/js/login/jquery.min.js" ></script>
-<script type="text/javascript" src="<%=basePath%>/js/login/common.js" ></script>
+
+<script>
+    function ajaxLogin() {
+        $.ajax({
+            url : "frontLogin",
+            type : 'post',
+            dataType: "json",
+            data : {
+                "userName" : $('#userName').val(),
+                "password" : $('#password').val(),
+            },
+            success : function (obj, response, status) {
+                if (obj.success) {
+
+                    location.href = "<%=basePath%>index1.jsp";
+                } else {
+                    alert(obj.msg);
+                }
+            }
+        });
+    }
+</script>
 </body>
 </html>

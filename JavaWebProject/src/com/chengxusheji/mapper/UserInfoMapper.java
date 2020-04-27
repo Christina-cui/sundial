@@ -26,4 +26,11 @@ public interface UserInfoMapper {
 	/*删除用户记录*/
 	public void deleteUserInfo(String user_name) throws Exception;
 
+//	根据电话查找人
+	public UserInfo queryUserByPhone(String phone) throws Exception;
+
+	//根据Email查找人
+	public UserInfo queryUserByEmail(String email) throws Exception;
+
+
 }

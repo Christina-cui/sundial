@@ -16,7 +16,7 @@
 	<p>登录帐号：<input type="text"  id="manager" class="textbox"></p>
 	<p>登录密码：<input type="password" id="password" class="textbox"></p>
 	<p style="display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;身份：
-		<select name="identify" id="identify">
+		<select name="identify" id="identify">AZ
 			<option value="admin">超级管理员</option>
 			<option value="departAdmin">部门管理员</option>
 			<option value="ssAdmin">实施人员</option>

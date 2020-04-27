@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.chengxusheji.po.UserInfo;
 import com.chengxusheji.service.UserInfoService;
+import javafx.scene.chart.ValueAxis;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller; 
 import org.springframework.ui.Model;
@@ -37,6 +39,37 @@ public class SystemController {
 	public String login(Model model) {
 		model.addAttribute(new Admin());
 		return "login";
+	}
+	//检查手机号
+	@RequestMapping(value = "/checkPhone",method = RequestMethod.POST)
+	public void checkPhone(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		String phone = request.getParameter("phone");
+		UserInfo user = userInfoService.findUserByPhone(phone);
+		String isExistPhone="";
+		if(user!=null){
+			isExistPhone="该手机号已注册";
+		}
+		response.setCharacterEncoding("utf-8");
+		PrintWriter writer = response.getWriter();
+		writer.write(isExistPhone);
+		writer.flush();
+		writer.close();
+	}
+
+	//根据邮件查找
+	@RequestMapping(value = "/checkEmail",method = RequestMethod.POST)
+	public void checkEmail(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		String email = request.getParameter("email");
+		UserInfo user = userInfoService.findUserByEmail(email);
+		String isExistEmail="";
+		if(user!=null){
+			isExistEmail="该邮箱已注册";
+		}
+		response.setCharacterEncoding("utf-8");
+		PrintWriter writer = response.getWriter();
+		writer.write(isExistEmail);
+		writer.flush();
+		writer.close();
 	}
 
 	//前台用户登录

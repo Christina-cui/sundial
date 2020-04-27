@@ -45,4 +45,12 @@ mapper.xml以statement为单位管理sql语句
 		delete from t_userInfo where user_name=#{user_name}
 	</delete>
 
+	<select id="queryUserByPhone" parameterType="string">
+		select * from t_userInfo where telephone = #{phone}
+	</select>
+
+	<select id="queryUserByEmail" parameterType="string">
+		select * from t_userInfo where email = #{email}
+	</select>
+
 </mapper>
