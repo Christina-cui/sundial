@@ -19,7 +19,7 @@
 		<select name="identify" id="identify">AZ
 			<option value="admin">超级管理员</option>
 			<option value="departAdmin">部门管理员</option>
-			<option value="ssAdmin">实施人员</option>
+			<option value="ssAdmin">实施人员</option>KK
 			<option value="kfAdmin">客服人员</option>
 		</select>
 	</p>
